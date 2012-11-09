@@ -67,7 +67,7 @@
  */
 ?>
 
-<div id="page-wrapper"><div id="page">
+<div id="page">
 
   <header id="header" role="banner" class="clearfix">
 
@@ -172,4 +172,4 @@
     <?php print render($page['footer']); ?>
   </div></footer> <!-- /.section, /#footer -->
 
-</div></div> <!-- /#page, /#page-wrapper -->
+</div> <!-- /#page -->
