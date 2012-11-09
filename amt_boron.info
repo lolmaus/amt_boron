@@ -1,0 +1,20 @@
+name = AMT Boron Subtheme
+core = 7.x
+base theme = boron
+
+; Base styleseet
+stylesheets[all][] = css/style.css
+
+; Prevent using Boron's layout.css
+stylesheets[all][] = css/layout.css
+
+scripts[] = js/ios-hover-fix.js
+scripts[] = js/viewport.js
+
+regions[header_top] = Header top
+regions[header] = Header
+regions[highlighted] = Highlighted
+regions[help] = Help
+regions[content] = Content
+regions[postscript] = Postscript
+regions[footer] = Footer
