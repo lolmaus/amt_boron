@@ -9,9 +9,11 @@ $development: true
 /////////////////
 // Variables
 /////////////////
+@import basic/variables/_fonts.sass
+@import basic/variables/_colors.sass
 @import basic/variables/_grid.sass
 @import basic/variables/_breakpoints.sass
-@import basic/variables/_fonts.sass
+
 
 /////////////////
 // Mixins
@@ -41,4 +43,5 @@ $development: true
 /////////////////
 // Sections
 /////////////////
-@import modules/sections/_header.sass
+@import modules/sections/_header-wrapper.sass
+@import "modules/sections/_header-first.sass"

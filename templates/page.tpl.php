@@ -69,53 +69,55 @@
 
 <div id="page">
 
-  <header id="header" role="banner" class="clearfix">
+  <div id="header-wrapper">
+    <header id="header" role="banner" class="clearfix">
 
-    <?php if ($logo): ?>
-      <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home" id="logo">
-        <img src="<?php print $logo; ?>" alt="<?php print t('Home'); ?>" />
-      </a>
-    <?php endif; ?>
+      <?php if ($logo): ?>
+        <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home" id="logo">
+          <img src="<?php print $logo; ?>" alt="<?php print t('Home'); ?>" />
+        </a>
+      <?php endif; ?>
 
-    <?php if ($site_name || $site_slogan): ?>
-      <div id="name-and-slogan">
-        <?php if ($site_name): ?>
-          <?php if ($title): ?>
-            <div id="site-name"><strong>
-              <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home"><span><?php print $site_name; ?></span></a>
-            </strong></div>
-          <?php else: /* Use h1 when the content title is empty */ ?>
-            <h1 id="site-name">
-              <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home"><span><?php print $site_name; ?></span></a>
-            </h1>
+      <?php if ($site_name || $site_slogan): ?>
+        <div id="name-and-slogan">
+          <?php if ($site_name): ?>
+            <?php if ($title): ?>
+              <div id="site-name"><strong>
+                <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home"><span><?php print $site_name; ?></span></a>
+              </strong></div>
+            <?php else: /* Use h1 when the content title is empty */ ?>
+              <h1 id="site-name">
+                <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home"><span><?php print $site_name; ?></span></a>
+              </h1>
+            <?php endif; ?>
           <?php endif; ?>
-        <?php endif; ?>
 
-        <?php if ($site_slogan): ?>
-          <div id="site-slogan"><?php print $site_slogan; ?></div>
-        <?php endif; ?>
-      </div> <!-- /#name-and-slogan -->
-    <?php endif; ?>
+          <?php if ($site_slogan): ?>
+            <div id="site-slogan"><?php print $site_slogan; ?></div>
+          <?php endif; ?>
+        </div> <!-- /#name-and-slogan -->
+      <?php endif; ?>
 
-    <?php print render($page['header']); ?>
+      <?php print render($page['header']); ?>
 
-    <?php if (isset($page['header_first'])): ?>
-      <div id="header-first">
+      <?php if (isset($page['header_first'])): ?>
+        <div id="header-first">
+          <div class="section">
+            <?php print render($page['header_first']); ?>
+          </div> <!-- /.section -->
+        </div> <!-- /#header-second -->
+      <?php endif; ?>
+
+      <?php if (isset($page['header_second'])): ?>
+      <div id="header-second">
         <div class="section">
-          <?php print render($page['header_first']); ?>
+          <?php print render($page['header_second']); ?>
         </div> <!-- /.section -->
       </div> <!-- /#header-second -->
-    <?php endif; ?>
+      <?php endif; ?>
 
-    <?php if (isset($page['header_second'])): ?>
-    <div id="header-second">
-      <div class="section">
-        <?php print render($page['header_second']); ?>
-      </div> <!-- /.section -->
-    </div> <!-- /#header-second -->
-    <?php endif; ?>
-
-  </header> <!-- /.section, /#header -->
+    </header> <!-- /#header -->
+  </div><!-- /#header-wrapper -->
 
 
   <div id="main-wrapper"><div id="main" class="clearfix<?php if ($main_menu) { print ' with-navigation'; } ?>">
@@ -168,8 +170,11 @@
     <?php endif; ?>
 
   </div></div> <!-- /#main, /#main-wrapper -->
-  <footer id="footer" role="contentinfo"><div class="section">
-    <?php print render($page['footer']); ?>
-  </div></footer> <!-- /.section, /#footer -->
+
+  <div id="footer-wrapper">
+    <footer id="footer" role="contentinfo"><div class="section">
+      <?php print render($page['footer']); ?>
+    </div></footer> <!-- /.section, /#footer -->
+  </div><!-- /#footer-wrapper -->
 
 </div> <!-- /#page -->
