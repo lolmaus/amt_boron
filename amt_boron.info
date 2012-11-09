@@ -12,7 +12,8 @@ scripts[] = js/ios-hover-fix.js
 scripts[] = js/viewport.js
 
 regions[header_top] = Header top
-regions[header] = Header
+regions[header_first] = Header First
+regions[header_second] = Header Second
 regions[highlighted] = Highlighted
 regions[help] = Help
 regions[content] = Content

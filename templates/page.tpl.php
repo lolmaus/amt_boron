@@ -69,7 +69,7 @@
 
 <div id="page-wrapper"><div id="page">
 
-  <header id="header" role="banner"><div class="section clearfix">
+  <header id="header" role="banner" class="clearfix">
 
     <?php if ($logo): ?>
       <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home" id="logo">
@@ -99,7 +99,23 @@
 
     <?php print render($page['header']); ?>
 
-  </div></header> <!-- /.section, /#header -->
+    <?php if (isset($page['header_first'])): ?>
+      <div id="header-first">
+        <div class="section">
+          <?php print render($page['header_first']); ?>
+        </div> <!-- /.section -->
+      </div> <!-- /#header-second -->
+    <?php endif; ?>
+
+    <?php if (isset($page['header_second'])): ?>
+    <div id="header-second">
+      <div class="section">
+        <?php print render($page['header_second']); ?>
+      </div> <!-- /.section -->
+    </div> <!-- /#header-second -->
+    <?php endif; ?>
+
+  </header> <!-- /.section, /#header -->
 
 
   <div id="main-wrapper"><div id="main" class="clearfix<?php if ($main_menu) { print ' with-navigation'; } ?>">
@@ -136,15 +152,19 @@
     <?php endif; ?>
 
     <?php if (isset($page['sidebar_first'])): ?>
-      <aside id="sidebar-first" class="column sidebar" role="complementary"><div class="section">
-        <?php print render($page['sidebar_first']); ?>
-      </div></aside> <!-- /.section, /#sidebar-first -->
+      <aside id="sidebar-first" class="column sidebar" role="complementary">
+        <div class="section">
+          <?php print render($page['sidebar_first']); ?>
+        </div>
+      </aside> <!-- /.section, /#sidebar-first -->
     <?php endif; ?>
 
     <?php if (isset($page['sidebar_second'])): ?>
-      <aside id="sidebar-second" class="column sidebar" role="complementary"><div class="section">
-        <?php print render($page['sidebar_second']); ?>
-      </div></aside> <!-- /.section, /#sidebar-second -->
+      <aside id="sidebar-second" class="column sidebar" role="complementary">
+        <div class="section">
+          <?php print render($page['sidebar_second']); ?>
+        </div>
+      </aside> <!-- /.section, /#sidebar-second -->
     <?php endif; ?>
 
   </div></div> <!-- /#main, /#main-wrapper -->
