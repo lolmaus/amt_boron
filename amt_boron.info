@@ -8,8 +8,8 @@ stylesheets[all][] = css/style.css
 ; Prevent using Boron's layout.css
 stylesheets[all][] = css/layout.css
 
-scripts[] = js/ios-hover-fix.js
-scripts[] = js/viewport.js
+; scripts[] = js/ios-hover-fix.js
+; scripts[] = js/viewport.js
 
 regions[header_top] = Header top
 regions[header_first] = Header First
