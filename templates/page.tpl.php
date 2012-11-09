@@ -135,13 +135,13 @@
       </div></nav> <!-- /.section, /#navigation -->
     <?php endif; ?>
 
-    <?php if ($page['sidebar_first']): ?>
+    <?php if (isset($page['sidebar_first'])): ?>
       <aside id="sidebar-first" class="column sidebar" role="complementary"><div class="section">
         <?php print render($page['sidebar_first']); ?>
       </div></aside> <!-- /.section, /#sidebar-first -->
     <?php endif; ?>
 
-    <?php if ($page['sidebar_second']): ?>
+    <?php if (isset($page['sidebar_second'])): ?>
       <aside id="sidebar-second" class="column sidebar" role="complementary"><div class="section">
         <?php print render($page['sidebar_second']); ?>
       </div></aside> <!-- /.section, /#sidebar-second -->
