@@ -1,0 +1,17 @@
+$bp-small-medium   : 400px
+$bp-medium-large   : 600px
+$bp-large-xlarge   : 800px
+$bp-xlarge-xxlarge : 1000px
+
+$cols-small   : 4
+$cols-medium  : 8
+$cols-large   : 12
+
+$layout-medium-and-above  : $bp-small-medium + 1 $cols-medium
+$layout-large-and-above   : $bp-medium-large + 1 $cols-large
+$layout-xlarge-and-above  : $bp-large-xlarge + 1 $cols-large
+$layout-xxlarge-and-above : $bp-xlarge-xxlarge + 1 $cols-large
+
+$layout-0-to-medium       : 0 $cols-medium $bp-medium-large
+$layout-medium            : $bp-small-medium + 1 $cols-medium $bp-medium-large
+$layout-large-to-xlarge   : $bp-medium-large + 1 $cols-large $bp-large-xlarge
