@@ -119,6 +119,13 @@
     </header> <!-- /#header -->
   </div><!-- /#header-wrapper -->
 
+  <?php if (isset($page['subheader'])): ?>
+    <div id="subheader-wrapper">
+      <div class="section">
+        <?php print render($page['subheader']); ?>
+      </div> <!-- /.section -->
+    </div><!-- /#subheader-wrapper -->
+  <?php endif; ?>
 
   <div id="main-wrapper"><div id="main" class="clearfix<?php if ($main_menu) { print ' with-navigation'; } ?>">
 

@@ -1,5 +1,5 @@
 // Set to `true` to enable block outlines and grid backgrounds
-$development: true
+$development: false
 
 /////////////////
 // Library imports
@@ -19,6 +19,7 @@ $development: true
 // Mixins
 /////////////////
 @import basic/mixins/_development.sass
+@import basic/mixins/_inverted-color.sass
 
 /////////////////
 // Resets
@@ -45,4 +46,5 @@ $development: true
 // Sections
 /////////////////
 @import modules/sections/_header-wrapper.sass
-@import "modules/sections/_header-first.sass"
+@import modules/sections/_header-first.sass
+@import modules/sections/_subheader.sass

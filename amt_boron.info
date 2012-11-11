@@ -14,6 +14,7 @@ stylesheets[all][] = css/layout.css
 regions[header_top] = Header top
 regions[header_first] = Header First
 regions[header_second] = Header Second
+regions[subheader] = Subheader
 regions[highlighted] = Highlighted
 regions[help] = Help
 regions[content] = Content
