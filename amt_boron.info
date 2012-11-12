@@ -20,3 +20,5 @@ regions[help] = Help
 regions[content] = Content
 regions[postscript] = Postscript
 regions[footer] = Footer
+
+scripts[] = javascripts/viewport.js
