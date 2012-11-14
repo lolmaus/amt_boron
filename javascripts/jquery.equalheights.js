@@ -18,7 +18,7 @@
  */
 
 (function ($) {
-    col = ".view-services-on-title-page .views-row";
+    target = ".view-services-on-title-page .views-row";
 
     $.fn.equalHeights = function(minHeight) {
         tallest = (minHeight) ? minHeight : 0;
@@ -34,14 +34,14 @@
     }
 
     function doResize() {
-        $(col).equalHeights();
+        $(target).equalHeights();
     }
 
     $(document).ready(function() {
        doResize();
     });
     $(window).resize(function() {
-        $(col).css("height","auto" )
+        $(target).css("height","auto" ) // Reset the height so that it adjusts to window resize
        doResize();
     });
 })(jQuery);
