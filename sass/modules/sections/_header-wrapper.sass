@@ -1,5 +1,15 @@
 #header-wrapper
   background:       url("../images/header-glow.png") no-repeat scroll center bottom $color-header-background
-  padding:          1em 0
+  padding:          $vertical-margin/2 0
 
   +inverted-color
+
+$right-col: 4
+#header
+  & > :first-child
+    +at-breakpoint($layout-large-and-above)
+      +span-columns($cols-large - $right-col, $cols-large)
+
+  & > :nth-child(2)
+    +at-breakpoint($layout-large-and-above)
+      +span-columns($right-col omega, $cols-large)

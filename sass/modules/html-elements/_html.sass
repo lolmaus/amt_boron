@@ -1,2 +1,15 @@
 html
   background-image: url("http://luiszuno.com/themes/wp-nova/wp-content/themes/nova/img/bg/patterns/noise.png")
+
+
+  font-family:  $font-sans-narrow
+  font-size:  16px
+  +transition(font-size 0.5s)
+  color:      $color-main
+
+
+  +at-breakpoint($layout-large-and-above)
+    font-size: 18px
+
+  +at-breakpoint($layout-xlarge-and-above)
+    font-size: 20px
