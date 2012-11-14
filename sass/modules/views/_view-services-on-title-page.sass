@@ -1,0 +1,42 @@
+=view-services-on-title-page-row-width($cols-total, $cols)
+  width:        columns($cols-total / $cols,$cols-total)
+  margin-right: gutter($cols-total)
+
+  &:nth-child(#{$cols}n)
+    margin-right: 0
+
+.view-services-on-title-page
+  .views-row
+    background-color: rgba(black,0.2)
+    border-radius:    1em
+    padding:          1em
+    margin-bottom:    1em
+
+    //img
+    //  width:  100%
+    //  height: auto
+    .views-field-field-image
+      +intrinsic-ratio(1)
+
+
+      .field-content
+        text-align: center
+        img
+          width:  auto
+          height: auto
+          max-width: 100%
+          max-height: 100%
+
+    +at-breakpoint($layout-medium-and-above)
+      display:        inline-block
+      vertical-align: top
+
+    +at-breakpoint($layout-medium-to-large)
+      +view-services-on-title-page-row-width($cols-medium,2)
+
+    +at-breakpoint($layout-large-to-xlarge)
+      +view-services-on-title-page-row-width($cols-large,3)
+
+    +at-breakpoint($layout-xlarge-and-above)
+      +view-services-on-title-page-row-width($cols-large,4)
+
