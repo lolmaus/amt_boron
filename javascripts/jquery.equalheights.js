@@ -40,7 +40,8 @@
     $(document).ready(function() {
        doResize();
     });
-    $(col).resize(function() {
+    $(window).resize(function() {
+        $(col).css("height","auto" )
        doResize();
     });
 })(jQuery);
