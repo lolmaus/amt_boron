@@ -17,7 +17,9 @@ regions[header_second] = Header Second
 regions[subheader] = Subheader
 regions[highlighted] = Highlighted
 regions[help] = Help
+regions[sidebar_first] = Sidebar First
 regions[content] = Content
+regions[sidebar_second] = Sidebar Second
 regions[postscript] = Postscript
 regions[footer] = Footer
 

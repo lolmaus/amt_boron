@@ -129,6 +129,14 @@
 
   <div id="main-wrapper"><div id="main" class="clearfix<?php if ($main_menu) { print ' with-navigation'; } ?>">
 
+    <?php if (isset($page['sidebar_first'])): ?>
+      <aside id="sidebar-first" class="column sidebar" role="complementary">
+        <div class="section">
+          <?php print render($page['sidebar_first']); ?>
+        </div>
+      </aside> <!-- /.section, /#sidebar-first -->
+    <?php endif; ?>
+
     <div id="content" class="column" role="main"><div class="section">
       <?php if ($page['highlighted']): ?>
         <div id="highlighted"><?php print render($page['highlighted']); ?></div>
@@ -158,14 +166,6 @@
         <?php print theme('links__system_main_menu', array('links' => $main_menu, 'attributes' => array('id' => 'main-menu', 'class' => array('links', 'clearfix')), 'heading' => array('text' => t('Main menu'), 'level' => 'h2', 'class' => array('element-invisible'))));  ?>
         <?php print theme('links__system_secondary_menu', array('links' => $secondary_menu, 'attributes' => array('id' => 'secondary-menu', 'class' => array('links', 'clearfix')), 'heading' => array('text' => t('Secondary menu'), 'level' => 'h2', 'class' => array('element-invisible'))));  ?>
       </div></nav> <!-- /.section, /#navigation -->
-    <?php endif; ?>
-
-    <?php if (isset($page['sidebar_first'])): ?>
-      <aside id="sidebar-first" class="column sidebar" role="complementary">
-        <div class="section">
-          <?php print render($page['sidebar_first']); ?>
-        </div>
-      </aside> <!-- /.section, /#sidebar-first -->
     <?php endif; ?>
 
     <?php if (isset($page['sidebar_second'])): ?>
