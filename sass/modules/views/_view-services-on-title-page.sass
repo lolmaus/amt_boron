@@ -7,7 +7,10 @@
 
 .view-services-on-title-page
   .views-row
-    background-color: rgba(black,0.1)
+    background-color: rgba(black,0.8)
+    +inverted-color
+
+
     border-radius:    1em
     padding:          1em
     margin-bottom:    $vertical-margin
@@ -17,6 +20,11 @@
 
     &>*
       margin-bottom: 1em
+
+    .views-field-field-short-description
+      font-size:    0.8em
+      font-style:   italic
+      color:        $color-inverted-supplementary
 
     .views-field-field-image
       +intrinsic-ratio(1)
