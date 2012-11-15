@@ -1,6 +1,9 @@
 #sidebar-first
   +at-breakpoint($layout-large-to-xlarge)
-    +span-columns($cols-large/3, $cols-large)
+    +span-columns(1, $cols-large)
 
-  +at-breakpoint($layout-xlarge-and-above)
-    +span-columns($cols-large/4, $cols-large)
+  +at-breakpoint($layout-xlarge-to-xxlarge)
+    +span-columns(1, $cols-xlarge)
+
+  +at-breakpoint($layout-xxlarge-and-above)
+    +span-columns(1, $cols-xxlarge)

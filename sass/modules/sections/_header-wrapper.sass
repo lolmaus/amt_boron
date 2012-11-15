@@ -11,14 +11,26 @@
   .block
     margin-bottom: 0
 
-$right-col: 4
+$right-col: 1
 #header
   +standard-container
 
   & > :first-child
-    +at-breakpoint($layout-large-and-above)
+    +at-breakpoint($layout-large-to-xlarge)
       +span-columns($cols-large - $right-col, $cols-large)
 
+    +at-breakpoint($layout-xlarge-to-xxlarge)
+      +span-columns($cols-xlarge - $right-col, $cols-xlarge)
+
+    +at-breakpoint($layout-xxlarge-and-above)
+      +span-columns($cols-xxlarge - $right-col, $cols-xxlarge)
+
   & > :nth-child(2)
-    +at-breakpoint($layout-large-and-above)
+    +at-breakpoint($layout-large-to-xlarge)
       +span-columns($right-col omega, $cols-large)
+
+    +at-breakpoint($layout-xlarge-to-xxlarge)
+      +span-columns($right-col omega, $cols-xlarge)
+
+    +at-breakpoint($layout-xxlarge-and-above)
+      +span-columns($right-col omega, $cols-xxlarge)

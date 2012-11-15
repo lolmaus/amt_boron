@@ -1,8 +1,8 @@
-=view-services-on-title-page-row-width($cols-total, $cols)
-  width:        columns($cols-total / $cols,$cols-total)
+=view-services-on-title-page-row-width($items,$cols-total,$offset: 1)
+  width:        columns(1,$cols-total - $offset)
   margin-right: gutter($cols-total)
 
-  &:nth-child(#{$cols}n)
+  &:nth-child(#{$items}n)
     margin-right: 0
 
 .view-services-on-title-page
@@ -51,11 +51,15 @@
       vertical-align: top
 
     +at-breakpoint($layout-medium-to-large)
-      +view-services-on-title-page-row-width($cols-medium,2)
+      +view-services-on-title-page-row-width(2, $cols-medium, 0)
 
     +at-breakpoint($layout-large-to-xlarge)
-      +view-services-on-title-page-row-width($cols-large - 4,2)
+      +view-services-on-title-page-row-width(2, $cols-large)
 
-    +at-breakpoint($layout-xlarge-and-above)
-      +view-services-on-title-page-row-width($cols-large - 3,3)
+    +at-breakpoint($layout-xlarge-to-xxlarge)
+      +view-services-on-title-page-row-width(3, $cols-xlarge)
+
+    +at-breakpoint($layout-xxlarge-and-above)
+      +view-services-on-title-page-row-width(4, $cols-xxlarge)
+
 
