@@ -1,4 +1,8 @@
 #header-wrapper
+  +background-image(linear-gradient(left, #F858EF, #FFE413))
+  padding-bottom: 2px
+
+#header-wrapper-inner
   background:       url("../images/header-glow.png") no-repeat scroll center bottom $color-header-background
   padding:          $vertical-margin/2 0
 
@@ -9,6 +13,8 @@
 
 $right-col: 4
 #header
+  +standard-container
+
   & > :first-child
     +at-breakpoint($layout-large-and-above)
       +span-columns($cols-large - $right-col, $cols-large)

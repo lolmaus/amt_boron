@@ -1,15 +1,19 @@
 #subheader-wrapper
   background: url("../images/black-1x2px.png") repeat-x scroll center bottom  $color-subheader-background
-  border-top:       1px   solid $color-subheader-supplementary-1
 
   +inverted-color
 
-  .block
-    margin-bottom: 0
+  &>*
+    +standard-container
 
-  ul
-    +horizontal-list
+    .block
+      margin-bottom: 0
 
-    li
-      padding: 1em 0 1.2em
-      background: url("../images/menu-arrow.png") no-repeat scroll center bottom transparent
+    ul
+      +horizontal-list
+
+      li
+        padding: 1em 0 1.2em
+        background: url("../images/menu-arrow.png") no-repeat scroll center bottom transparent
+
+

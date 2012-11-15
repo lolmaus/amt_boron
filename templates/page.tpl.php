@@ -69,7 +69,7 @@
 
 <div id="page">
 
-  <div id="header-wrapper">
+  <div id="header-wrapper"><div id="header-wrapper-inner">
     <header id="header" role="banner" class="clearfix">
 
       <?php if ($logo): ?>
@@ -117,7 +117,7 @@
       <?php endif; ?>
 
     </header> <!-- /#header -->
-  </div><!-- /#header-wrapper -->
+  </div></div><!-- /#header-wrapper-inner /#header-wrapper -->
 
   <?php if (isset($page['subheader'])): ?>
     <div id="subheader-wrapper">
