@@ -1,6 +1,6 @@
 =view-services-on-title-page-row-width($items,$cols-total,$offset: 1)
   width:        columns(1,$cols-total - $offset)
-  margin-right: gutter($cols-total)
+  margin-right: gutter($items)
 
   &:nth-child(#{$items}n)
     margin-right: 0

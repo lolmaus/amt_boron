@@ -1,6 +1,6 @@
 #block-menu-menu-services
+
   ul
-    font-size:    0.9em
     line-height:  100%
 
     margin-left: 0
@@ -9,8 +9,14 @@
       +no-bullet
       margin: 0.5em 0
 
-      .nolink
-        font-weight: bold
+      .nolink:after
+        content: ":"
 
       ul
         margin-left: 1em
+
+        li
+          list-style: square outside
+
+  +at-breakpoint($layout-large-and-above)
+    font-size:    0.8em
