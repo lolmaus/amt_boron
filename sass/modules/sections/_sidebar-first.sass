@@ -1,9 +1,11 @@
+$cols-sidebar: 1
+
 #sidebar-first
-  +at-breakpoint($layout-large-to-xlarge)
-    +span-columns(1, $cols-large)
+  +at-breakpoint($layout-l)
+    +span-columns($cols-sidebar, $cols-l)
 
-  +at-breakpoint($layout-xlarge-to-xxlarge)
-    +span-columns(1, $cols-xlarge)
+  +at-breakpoint($layout-xl)
+    +span-columns($cols-sidebar, $cols-xl)
 
-  +at-breakpoint($layout-xxlarge-and-above)
-    +span-columns(1, $cols-xxlarge)
+  +at-breakpoint($layout-xxl)
+    +span-columns($cols-sidebar, $cols-xxl)

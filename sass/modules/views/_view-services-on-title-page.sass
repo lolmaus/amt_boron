@@ -1,6 +1,15 @@
 =view-services-on-title-page-row-width($items,$cols-total,$offset: 1)
   width:        columns(1,$cols-total - $offset)
-  margin-right: gutter($items)
+
+  //Setting the margin between items
+  //And resetting it for multiples so that it's possible
+  //to use this mixin several times for different media queries
+  &,
+  &:nth-child(2n),
+  &:nth-child(3n),
+  &:nth-child(4n),
+  &:nth-child(5n),
+    margin-right: gutter($items)
 
   &:nth-child(#{$items}n)
     margin-right: 0
@@ -46,20 +55,18 @@
             img
               opacity: 0.7
 
-    +at-breakpoint($layout-medium-and-above)
+    +at-breakpoint($layout-m)
       display:        inline-block
       vertical-align: top
+      +view-services-on-title-page-row-width(2, $cols-m, 0)
 
-    +at-breakpoint($layout-medium-to-large)
-      +view-services-on-title-page-row-width(2, $cols-medium, 0)
+    +at-breakpoint($layout-l)
+      +view-services-on-title-page-row-width(2, $cols-l)
 
-    +at-breakpoint($layout-large-to-xlarge)
-      +view-services-on-title-page-row-width(2, $cols-large)
+    +at-breakpoint($layout-xl)
+      +view-services-on-title-page-row-width(3, $cols-xl)
 
-    +at-breakpoint($layout-xlarge-to-xxlarge)
-      +view-services-on-title-page-row-width(3, $cols-xlarge)
-
-    +at-breakpoint($layout-xxlarge-and-above)
-      +view-services-on-title-page-row-width(4, $cols-xxlarge)
+    +at-breakpoint($layout-xxl)
+      +view-services-on-title-page-row-width(4, $cols-xxl)
 
 

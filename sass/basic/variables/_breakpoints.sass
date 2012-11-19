@@ -1,20 +1,19 @@
-$bp-small-medium   : 400px   // 4
-$bp-medium-large   : 600px   // 8
-$bp-large-xlarge   : 800px   // 12
-$bp-xlarge-xxlarge : 1000px  // 15
+// Breakpoints
+$bp-s-m:    400px
+$bp-m-l:    600px
+$bp-l-xl:   800px
+$bp-xl-xxl: 1000px
+$max-width: 1200px
 
-$cols-small   : 1
-$cols-medium  : 2
-$cols-large   : 3
-$cols-xlarge  : 4
-$cols-xxlarge : 5
+// Columns
+$cols-s:   1
+$cols-m:   2
+$cols-l:   3
+$cols-xl:  4
+$cols-xxl: 5
 
-$layout-medium-and-above  : $bp-small-medium + 1 $cols-medium
-$layout-large-and-above   : $bp-medium-large + 1 $cols-large
-$layout-xlarge-and-above  : $bp-large-xlarge + 1 $cols-xlarge
-$layout-xxlarge-and-above : $bp-xlarge-xxlarge + 1 $cols-xxlarge
-
-$layout-0-to-medium       : 0 $cols-small $bp-small-medium
-$layout-medium-to-large   : $bp-small-medium + 1 $cols-medium $bp-medium-large
-$layout-large-to-xlarge   : $bp-medium-large + 1 $cols-large  $bp-large-xlarge
-$layout-xlarge-to-xxlarge : $bp-large-xlarge + 1 $cols-xlarge $bp-xlarge-xxlarge
+// Layouts
+$layout-m:    $bp-s-m     $cols-m
+$layout-l:    $bp-m-l     $cols-l
+$layout-xl:   $bp-l-xl    $cols-xl
+$layout-xxl:  $bp-xl-xxl  $cols-xxl

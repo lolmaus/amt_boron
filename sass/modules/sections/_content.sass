@@ -1,9 +1,9 @@
 #content
-  +at-breakpoint($layout-large-to-xlarge)
-    +span-columns($cols-large - 1 omega, $cols-large)
+  +at-breakpoint($layout-l)
+    +span-columns($cols-l - $cols-sidebar omega, $cols-l)
 
-  +at-breakpoint($layout-xlarge-to-xxlarge)
-    +span-columns($cols-xlarge - 1 omega, $cols-xlarge)
+  +at-breakpoint($layout-xl)
+    +span-columns($cols-xl - $cols-sidebar omega, $cols-xl)
 
-  +at-breakpoint($layout-xxlarge-and-above)
-    +span-columns($cols-xxlarge - 1 omega, $cols-xxlarge)
+  +at-breakpoint($layout-xxl)
+    +span-columns($cols-xxl - $cols-sidebar omega, $cols-xxl)
