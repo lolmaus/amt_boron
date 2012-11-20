@@ -1,0 +1,40 @@
+@import "compass/css3/border-radius"
+
+#ie-only
+  display: block !important
+
+  margin-top: 2em
+  font-size: 1.1em
+
+  text-align: center
+
+  color: white
+
+  a
+    &, &:visited, &:active, &:hover
+      display: inline-block
+      +border-radius(0.4em)
+      margin: -0.2em
+      padding: 0.2em
+      color: blue
+      background-color: white
+      text-decoration: underline !important
+
+
+
+  p
+    margin: 0.5em 0
+
+  li
+    list-style-type: disc
+
+  .block
+    margin-bottom: 0
+
+  & > *
+    display: inline-block
+    text-align: left
+    background-color: red
+    padding:  1em
+    +border-radius(1em)
+    margin: 0 1em

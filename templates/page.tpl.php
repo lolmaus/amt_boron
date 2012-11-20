@@ -127,6 +127,12 @@
     </div><!-- /#subheader-wrapper -->
   <?php endif; ?>
 
+  <div id="ie-only" style="display: none;">
+    <div class="section">
+      <?php print render($page['ie_only']); ?>
+    </div> <!-- /.section -->
+  </div>
+
   <div id="main-wrapper"><div id="main" class="clearfix<?php if ($main_menu) { print ' with-navigation'; } ?>">
 
     <aside id="sidebar-first" class="column sidebar" role="complementary">
