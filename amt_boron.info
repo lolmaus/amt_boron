@@ -23,5 +23,6 @@ regions[sidebar_second] = Sidebar Second
 regions[postscript] = Postscript
 regions[footer] = Footer
 
+scripts[] = javascripts/respond.min.js
 scripts[] = javascripts/viewport.js
 scripts[] = javascripts/jquery.equalheights.js
